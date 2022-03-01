@@ -1,36 +1,49 @@
-/* Google Fonts */
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+body {
+  --bkg-color: #fff;
+}
+body.dark-theme {
+  --bkg-color: #000;
+}
+a:hover {
+  --text-color: #000;
+}
+.dark-theme a:hover {
+  --text-color: #fff;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #000;
+    --bkg-color: #000;
+  }
+  body.light-theme {
+    --bkg-color: #fff;
+  }
+  a:hover {
+    --text-color: #fff;
+  }
+  .light-theme a:hover {
+    --text-color: #000;
   }
 }
-@media (prefers-color-scheme: light) {
-  body {
-    background-color: #fff;
-  }
-}
-body, p, a {
+
+* {
   color: #666666;
+  text-decoration: none !important;
   text-align: center;
   font-family: "Anonymous Pro", monospace;
 }
-a:hover {
-  color: #fff;
+body {
+  background: var(--bkg-color);
 }
-* {
+a {
   color: #666666;
-  text-decoration: none!important;
 }
-.float{
-	position:fixed;
-	width:60px;
-	height:60px;
-	bottom:40px;
-	right:40px;
-	background-color:#0C9;
-	color:#FFF;
-	border-radius:50px;
-	text-align:center;
-	box-shadow: 2px 2px 3px #999;
+a:hover {
+  color: var(--text-color);
+}
+.btn-check:focus + .btn,
+.btn:focus {
+  box-shadow: none;
 }
