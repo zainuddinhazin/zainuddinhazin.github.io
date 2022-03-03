@@ -61,8 +61,10 @@ const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
 const currentTheme = localStorage.getItem("theme");
 if (currentTheme == "dark") {
+  $(".btn-toggle").text("switch to light mode");
   document.body.classList.toggle("dark-theme");
 } else if (currentTheme == "light") {
+  $(".btn-toggle").text("switch to light mode");
   document.body.classList.toggle("light-theme");
 }
 
@@ -81,21 +83,20 @@ btn.addEventListener("click", function () {
   localStorage.setItem("theme", theme);
 });
 
-$(document).ready(function(){
-  $(".hamburger").click(function(){
+$(document).ready(function () {
+  $(".hamburger").click(function () {
     $(this).toggleClass("is-active");
   });
 });
 
-const changeText = (e) => {
-  
-  // Multiple lines solution
-  const element = $(".btn-toggle");
-  const textToReplace = element.text();
-  const newText = textToReplace.replace("dark", "light");
-  element.text(newText);
-};
-
-// Attaching the click event on the button
-$(document).on('click', '.btn-toggle', changeText);
-
+$(document).ready(function () {
+  $(".btn-toggle").click(function () {
+    $(".btn-toggle")
+      .text(
+        $(".btn-toggle").text() == "switch to dark mode"
+          ? "switch to light mode"
+          : "switch to dark mode"
+      )
+      .fadeIn();
+  });
+});
