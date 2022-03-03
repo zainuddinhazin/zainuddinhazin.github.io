@@ -105,17 +105,17 @@ a:hover,
 
 /* glitch */
 .glitch1 {
-  animation: glitch1 1.5s;
+  animation: glitch1 1s;
   overflow: hidden;
 }
 
 .glitch2 {
-  animation: glitch2 1.5s;
+  animation: glitch2 1s;
   overflow: hidden;
 }
 
 .glitch3 {
-  animation: glitch3 1.5s;
+  animation: glitch3 1s;
   overflow: hidden;
 }
 /*Keyframes*/
@@ -178,7 +178,7 @@ a:hover,
 @keyframes glitch2 {
   0% {
     transform: none;
-    opacity: 0.25;
+    opacity: 0.75;
   }
   7% {
     transform: translate(-2px, -3px);
@@ -186,11 +186,11 @@ a:hover,
   }
   10% {
     transform: none;
-    opacity: 0.25;
+    opacity: 0.75;
   }
   27% {
     transform: none;
-    opacity: 0.25;
+    opacity: 0.75;
   }
   30% {
     transform: translate(-5px, -2px);
@@ -198,11 +198,11 @@ a:hover,
   }
   35% {
     transform: none;
-    opacity: 0.25;
+    opacity: 0.75;
   }
   52% {
     transform: none;
-    opacity: 0.25;
+    opacity: 0.75;
   }
   55% {
     transform: translate(-5px, -1px);
@@ -210,11 +210,11 @@ a:hover,
   }
   50% {
     transform: none;
-    opacity: 0.25;
+    opacity: 0.75;
   }
   72% {
     transform: none;
-    opacity: 0.25;
+    opacity: 0.75;
   }
   75% {
     transform: translate(-2px, -6px);
@@ -222,18 +222,18 @@ a:hover,
   }
   80% {
     transform: none;
-    opacity: 0.25;
+    opacity: 0.75;
   }
   100% {
     transform: none;
-    opacity: 0.25;
+    opacity: 0.75;
   }
 }
 
 @keyframes glitch3 {
   0% {
     transform: none;
-    opacity: 0.25;
+    opacity: 0.75;
   }
   7% {
     transform: translate(2px, 3px);
@@ -241,11 +241,11 @@ a:hover,
   }
   10% {
     transform: none;
-    opacity: 0.25;
+    opacity: 0.75;
   }
   27% {
     transform: none;
-    opacity: 0.25;
+    opacity: 0.75;
   }
   30% {
     transform: translate(5px, 2px);
@@ -253,11 +253,11 @@ a:hover,
   }
   35% {
     transform: none;
-    opacity: 0.25;
+    opacity: 0.75;
   }
   52% {
     transform: none;
-    opacity: 0.25;
+    opacity: 0.75;
   }
   55% {
     transform: translate(5px, 1px);
@@ -265,11 +265,11 @@ a:hover,
   }
   50% {
     transform: none;
-    opacity: 0.25;
+    opacity: 0.75;
   }
   72% {
     transform: none;
-    opacity: 0.25;
+    opacity: 0.75;
   }
   75% {
     transform: translate(2px, 6px);
@@ -277,10 +277,10 @@ a:hover,
   }
   80% {
     transform: none;
-    opacity: 0.25;
+    opacity: 0.75;
   }
   100% {
     transform: none;
-    opacity: 0.25;
+    opacity: 0.75;
   }
 }
