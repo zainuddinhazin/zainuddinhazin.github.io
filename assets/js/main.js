@@ -1,3 +1,4 @@
+// typing effect
 var TxtType = function (el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
@@ -56,6 +57,7 @@ window.onload = function () {
   document.body.appendChild(css);
 };
 
+// dark light mode
 const btn = document.querySelector(".btn-toggle");
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
@@ -69,24 +71,25 @@ if (currentTheme == "dark") {
 }
 
 btn.addEventListener("click", function () {
+  if (!$("body").hasClass("glitch1")) {
+    document.body.classList.toggle("glitch1");
+  } else {
+    document.body.classList.toggle("glitch2");
+  }
   if (prefersDarkScheme.matches) {
     document.body.classList.toggle("light-theme");
+    document.body.classList.toggle("dark-theme");
     var theme = document.body.classList.contains("light-theme")
       ? "light"
       : "dark";
   } else {
+    document.body.classList.toggle("light-theme");
     document.body.classList.toggle("dark-theme");
     var theme = document.body.classList.contains("dark-theme")
       ? "dark"
       : "light";
   }
   localStorage.setItem("theme", theme);
-});
-
-$(document).ready(function () {
-  $(".hamburger").click(function () {
-    $(this).toggleClass("is-active");
-  });
 });
 
 $(document).ready(function () {
@@ -98,5 +101,12 @@ $(document).ready(function () {
           : "switch to dark mode"
       )
       .fadeIn();
+  });
+});
+
+// hamburger effect
+$(document).ready(function () {
+  $(".hamburger").click(function () {
+    $(this).toggleClass("is-active");
   });
 });
