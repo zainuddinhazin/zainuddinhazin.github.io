@@ -110,3 +110,26 @@ $(document).ready(function () {
     $(this).toggleClass("is-active");
   });
 });
+
+// fullscreen
+$(".fullscreen").click(function () {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+});
+
+document.addEventListener("fullscreenchange", function (event) {
+  displayButton();
+});
+
+function displayButton() {
+  if (document.fullscreenElement) {
+    $(".fullscreen").text("exit full screen").fadeIn();
+  } else {
+    $(".fullscreen").text("view in full screen").fadeIn();
+  }
+}
