@@ -66,24 +66,17 @@ if (currentTheme == "dark") {
   $(".btn-toggle").text("switch to light mode");
   document.body.classList.toggle("dark-theme");
 } else if (currentTheme == "light") {
-  $(".btn-toggle").text("switch to light mode");
+  $(".btn-toggle").text("switch to dark mode");
   document.body.classList.toggle("light-theme");
 }
 
 btn.addEventListener("click", function () {
-  if (!$("body").hasClass("glitch1")) {
-    document.body.classList.toggle("glitch1");
-  } else {
-    document.body.classList.toggle("glitch2");
-  }
   if (prefersDarkScheme.matches) {
     document.body.classList.toggle("light-theme");
-    document.body.classList.toggle("dark-theme");
     var theme = document.body.classList.contains("light-theme")
       ? "light"
       : "dark";
   } else {
-    document.body.classList.toggle("light-theme");
     document.body.classList.toggle("dark-theme");
     var theme = document.body.classList.contains("dark-theme")
       ? "dark"
