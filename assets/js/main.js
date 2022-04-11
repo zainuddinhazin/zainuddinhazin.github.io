@@ -126,3 +126,12 @@ function displayButton() {
     $(".fullscreen").text("view in full screen").fadeIn();
   }
 }
+
+// send email
+$(document).on("click", "#email", function () {
+  sendEmail();
+});
+
+function sendEmail() {
+  window.location = "mailto:zainuddinhazin@gmail.com";
+}
