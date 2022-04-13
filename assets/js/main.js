@@ -127,6 +127,15 @@ function displayButton() {
   }
 }
 
+// resume link
+$(document).on("click", "#resume", function () {
+  resumeLink();
+});
+
+function resumeLink() {
+  window.location = "assets/doc/resume-zainuddinhazin-2022.pdf";
+}
+
 // send email
 $(document).on("click", "#email", function () {
   sendEmail();
@@ -134,4 +143,22 @@ $(document).on("click", "#email", function () {
 
 function sendEmail() {
   window.location = "mailto:zainuddinhazin@gmail.com";
+}
+
+// whatsapp link
+$(document).on("click", "#whatsapp", function () {
+  whatsappLink();
+});
+
+function whatsappLink() {
+  window.location = "https://wa.link/ez69l2";
+}
+
+// phone link
+$(document).on("click", "#phone", function () {
+  phoneLink();
+});
+
+function phoneLink() {
+  window.location = "tel:+601162007978";
 }
