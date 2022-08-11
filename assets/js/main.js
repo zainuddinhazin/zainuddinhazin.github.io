@@ -244,3 +244,29 @@ $(document).ready(function () {
     }
   );
 });
+
+//contact form
+$(".php-email-form").on("submit", function (e) {
+  //optional validation code here
+
+  e.preventDefault();
+
+  $.ajax({
+    url: "https://script.google.com/macros/s/AKfycbyBz_9oh4rj7AJfOglkyzevacfKhqDRFS3azRxKDSJH5AAV0XAPWfVfNaiN7ZhRH9m1/exec",
+    method: "POST",
+    dataType: "json",
+    data: $(".php-email-form").serialize(),
+    success: function (response) {
+      if (response.result == "success") {
+        $(".php-email-form")[0].reset();
+        alert("message has been sent successfully!");
+        return true;
+      } else {
+        alert("error error error! please contact me through email, thanks!");
+      }
+    },
+    error: function () {
+      alert("error error error! please contact me through email, thanks!");
+    },
+  });
+});
